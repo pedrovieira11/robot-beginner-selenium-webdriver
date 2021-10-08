@@ -1,5 +1,5 @@
 *** Settings *** 
-Resource        base.robot
+Resource        ./resource/resource.robot
 
 Test Setup      Nova sessão
 Test Teardown   Encerra sessão
@@ -11,9 +11,7 @@ Verifica o valor ao informar o numero da linha
 
 Descobre a linha pelo texto chave e valida os demais valores
     Go To               ${url}/tables
-    ${target}=          Get WebElement      xpath:.//tr[contais(.,'@chadwickboseman')]
-    Log                 ${target.text}
-    Log To Console      ${target.text} 
+    ${target}=          Get WebElement      xpath:.//tr[contains(.,'@chadwickboseman')]
     Should Contain      ${target.text}      $ 700.000
     Should Contain      ${target.text}      Pantera Negra
          
