@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 
 *** Variables ***  
-${url}              https://training-wheels-protocol.herokuapp.com/
+${url}      https://training-wheels-protocol.herokuapp.com/
 
 *** Keywords ***
 Nova sessão
