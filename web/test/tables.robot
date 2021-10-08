@@ -1,8 +1,8 @@
 *** Settings *** 
 Resource        ./resource/resource.robot
 
-Test Setup      Nova sessão
-Test Teardown   Encerra sessão
+Test Setup      Start browser
+Test Teardown   Finish browser
 
 *** Test Cases ***
 Verifica o valor ao informar o numero da linha

@@ -3,11 +3,12 @@ Library     SeleniumLibrary
 
 *** Variables ***  
 ${url}      https://training-wheels-protocol.herokuapp.com/
+${browser}  chrome
 
 *** Keywords ***
-Nova sessão
-    Open Browser                    ${url}      chrome
+Start browser
+    Open Browser    ${url}      ${browser}
 
-Encerra sessão
+Finish browser
     Capture Page Screenshot
     Close Browser
