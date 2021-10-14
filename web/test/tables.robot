@@ -1,11 +1,11 @@
 *** Settings *** 
-Resource        ./resource/resource.robot
+Resource        ../resource/resourceWeb.robot
 
 Test Setup      Start browser
 Test Teardown   Finish browser
 
 *** Test Cases ***
-Verifica o valor ao informar o numero da linha
+Validate the value by low number
     Go To                           ${url}/tables
     Table Row Should Contain        id:actors   1   $ 10.000.000
 

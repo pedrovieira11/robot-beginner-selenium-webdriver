@@ -1,22 +1,22 @@
 *** Settings *** 
-Resource        ./resource/resource.robot
+Resource        ../resource/resourceWeb.robot
 
 Test Setup      Start browser
 Test Teardown   Finish browser
 
 *** Test Cases ***
-Login com sucesso
+Login success
     Go To                   ${url}/login
     Login With              stark  jarvis!
     Should See Logged User  Tony Stark
 
-Senha invalida
+Invalid password
     [tags]                          login_error
     Go To                           ${url}/login
     Login With                      stark              senhainvalida
     Should Contain Login Alert      Senha é invalida                   
 
-Usuário não existe
+User not found
     [tags]              login_error
     Go To               ${url}/login
     Login With          usuarioinvalido     jarvis!
