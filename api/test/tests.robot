@@ -1,7 +1,8 @@
 *** Settings ***
-Resource        ../config/resourceApi.robot
+Resource        ../resource/resourceApi.robot
 Suite Setup     Conectar a API
 
 *** Test Case ***
-GET
-    Fazer login
+Buscar personagem especifico
+    Buscar todos os personagens
+    
